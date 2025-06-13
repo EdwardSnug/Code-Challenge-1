@@ -10,7 +10,7 @@ function calculateChaiIngredients() {
     //Prompt function see w3schools documentation
     let person = prompt("Karibu! How many cups of Chai Bora would you like to make?");
     //Convert the user string prompt into number format
-    let numberOfCups = Number.parseFloat(prompt);
+    let numberOfCups = Number.parseFloat(person);
     //Check that a valid number input is in place to continue
     if (numberOfCups <= 0) {
         console.log("Couldn't quite your input kindly reenter a valid number to enjoy some heavenly tea");

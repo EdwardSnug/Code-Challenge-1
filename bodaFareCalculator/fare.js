@@ -5,7 +5,7 @@ const chargePerKm = 15;//KES 15 for every km traveled
 function calculateBodaFare(){
     let person = prompt("Unafika wapi Mkubwa? Kilometer ngapi?:");
     //Convert the user string prompt into number format
-    let distanceInKm = Number.parseFloat(prompt);
+    let distanceInKm = Number.parseFloat(person);
     //Check that a valid number input is in place to continue
     if (distanceInKm <= 0) {
         console.log("Sjakupata vizuri npigie tena");

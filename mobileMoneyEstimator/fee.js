@@ -7,7 +7,7 @@ const maxFee = 70;//Kes 70
 function estimateTransactionFee() {
     let person = prompt("Unatuma Ngapi? (KES):");
     //Convert the user string prompt into number format
-    let amountToSend = Number.parseFloat(prompt);
+    let amountToSend = Number.parseFloat(person);
     //Check that a valid number input is in place to continue
     if (amountToSend <= 0) {
         console.log("Please enter a valid amount to continue, TRY AGAIN!");
@@ -23,17 +23,12 @@ function estimateTransactionFee() {
     //Final block checks if transaction fee is greater than the maximum fee
     if (transFee < minFee) {
         calcTransFee = 10;
-        totalAmtDebit = calcTransFee + amountToSend;
-        return totalAmtDebit;
     } else if (transFee <= maxFee){
         calcTransFee = transFee;
-        totalAmtDebit = calcTransFee + amountToSend;
-        return totalAmtDebit;
     }else if (transFee > maxFee){
         calcTransFee = maxFee;
-        totalAmtDebit = calcTransFee + amountToSend;
-        return totalAmtDebit;
     }
+    totalAmtDebit = calcTransFee + amountToSend;
     //Printing our results to the console
     console.log(`Sending KES ${amountToSend}:`);
     console.log(`Calculated Transaction Fee: KES ${calcTransFee}`);
